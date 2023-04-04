@@ -1,5 +1,14 @@
 <ion-header>
     <ion-toolbar>
+        <ion-chip>
+            <ion-avatar>
+                <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <ion-label>Chip Avatar</ion-label>
+        </ion-chip>
+        <!-- <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar> -->
         <ion-title>welcome {{ form.username }}</ion-title>
     </ion-toolbar>
 </ion-header>
@@ -10,20 +19,20 @@
 
         <ion-tab-bar slot="bottom">
             <ion-tab-button tab="home">
-                <ion-icon name="play-circle"></ion-icon>
-                Listen Now
+                <ion-icon name="home-outline"></ion-icon>
+                Home
             </ion-tab-button>
             <ion-tab-button tab="radio">
-                <ion-icon name="radio"></ion-icon>
-                Radio
+                <ion-icon name="search-outline"></ion-icon>
+                Sarch
             </ion-tab-button>
             <ion-tab-button tab="library">
-                <ion-icon name="library"></ion-icon>
-                Library
+                <ion-icon name="call-outline"></ion-icon>
+                Call
             </ion-tab-button>
-            <ion-tab-button tab="search">
-                <ion-icon name="search"></ion-icon>
-                Search
+            <ion-tab-button (click)="doLogout()" tab="logout">
+                <ion-icon name="log-out-outline"></ion-icon>
+                Logout
             </ion-tab-button>
         </ion-tab-bar>
     </ion-tabs>

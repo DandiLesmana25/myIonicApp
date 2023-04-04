@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -14,9 +15,16 @@ export class WelcomePage implements OnInit {
     password: ''
   }
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  doLogout(){
+    this.router.navigateByUrl('home');
+  }
 
   ngOnInit() {
   }
+
+
+  
 
 }
